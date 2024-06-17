@@ -2,7 +2,7 @@
 clc; close all; clear all;
 
 
-fs = 1000;                    % Sampling frequency (samples per second)
+fs = 10;                    % Sampling frequency (samples per second)
 dt = 1/fs;                   % seconds per sample
 % StopTime = 4;                % seconds
 % t = (0:dt:StopTime)';        % seconds
@@ -19,7 +19,7 @@ dt = 1/fs;                   % seconds per sample
 % r = sin(2*pi*F*time);           % Reference
 
 Range = [-10, 10];
-SineData = [25, 40, 1];
+SineData = [10,40, 1];
 Band = [0, 1];
 NumPeriod = 1;
 Period = 10000;
@@ -53,18 +53,21 @@ y2 = [];
 
 figure()
 subplot(2,1,1)
-plot(u_data)
-title("Input data")
+title("VDP System")
+plot(time,u_data)
+ylabel("u_1")
+xlabel("time in [s]")
 subplot(2,1,2)
-plot(x(:,1))
-title("Output data")
+plot(time,x(:,1))
+ylabel('x_1')
+xlabel("time in [s]")
 
 
 
 %u_data = [u_data1;u_data2].'
 y_data = [x(:,1)].'
-save('u_data',"u_data")
-save('y_data',"y_data")
+save('u_data10000',"u_data")
+save('y_data10000',"y_data")
 
 
 
