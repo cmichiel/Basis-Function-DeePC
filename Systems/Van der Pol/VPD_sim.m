@@ -180,22 +180,22 @@ plot(r(1:length(y)),'LineWidth',3);
 hold on;
 plot(y,'LineWidth',3);
 legend('reference','RBF-SPC');
-title ('VDP SPC');
+title ('SPC: Reference vs Closed Loop Output');
 grid on
 saveas(fig,'VDP_RBF-SPC_output_N'+string(N)+'_n_basis'+string(n_basis)+'_Tini'+string(Tini)+'_'+Basis_func+'.png')
 
 
 fig2 = figure;
 plot(uvec,'LineWidth',3);
-title ('input');
-grid on;
+title('SPC: Control Input');
+grid on
 xlabel('Iterations');
 saveas(fig2,'VD_RBF-SPC_input_N'+string(N)+'_n_basis'+string(n_basis)+'_Tini'+string(Tini)+'_'+Basis_func+'.png')
 
 
 figure;
 plot(e,'LineWidth',3);
-title ('error');
+title ('Tracking Error');
 grid on;
 xlabel('Iterations');
 
