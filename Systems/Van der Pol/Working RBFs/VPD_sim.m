@@ -84,7 +84,7 @@ Gamma = Theta(:,2);
 centers = double(centers_sigmas.centers);
 log_sigmas = double(centers_sigmas.log_sigmas);
 
-Q = 2e2; 
+Q = 1e2; 
 R=  1;
 
 Psi = kron(eye(N), R);
